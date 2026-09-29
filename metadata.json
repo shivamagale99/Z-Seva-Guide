@@ -1,0 +1,6 @@
+{
+  "name": "Z Seva Guide - Civic Intelligence & Infrastructure Planning",
+  "description": "AI-powered civic intelligence and infrastructure planning platform that connects citizen reports with infrastructure gaps to uncover silent community needs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

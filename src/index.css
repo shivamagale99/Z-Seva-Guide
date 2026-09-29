@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-gov-blue: #0B3D91;
+    --color-navy: #163A5F;
+    --color-saffron: #F59E0B;
+    --color-gov-green: #138808;
+    --color-bg: #F5F7FA;
+    --color-surface: #FFFFFF;
+    --color-text: #1F2937;
+    --color-muted: #6B7280;
+    --color-border: #D9E0E7;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  /* High contrast mode for accessibility */
+  body.high-contrast {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+  }
+
+  body.high-contrast .bg-white,
+  body.high-contrast .bg-\[\#F5F7FA\],
+  body.high-contrast .bg-slate-50,
+  body.high-contrast .bg-slate-100 {
+    background-color: #0d1117 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+
+  body.high-contrast .text-slate-600,
+  body.high-contrast .text-slate-500,
+  body.high-contrast .text-slate-700,
+  body.high-contrast .text-\[\#6B7280\] {
+    color: #e5e7eb !important;
+  }
+
+  body.high-contrast button,
+  body.high-contrast a {
+    outline-color: #ffff00 !important;
+  }
+
+  /* Font scale modifiers */
+  body.font-scale-lg {
+    font-size: 110%;
+  }
+
+  body.font-scale-xl {
+    font-size: 120%;
+  }
+}
+
+/* Skip link visibility on focus */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #0B3D91;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.2s;
+  font-weight: 600;
+  border-radius: 0 0 4px 4px;
+}
+.skip-link:focus {
+  top: 0;
+}
